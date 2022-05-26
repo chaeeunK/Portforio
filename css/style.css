@@ -98,7 +98,7 @@ header{
     left: 2%;
     border-bottom:1px solid rgba(162, 180, 221, 0.507);
     backdrop-filter: blur(3px);
-}
+} 
 #Nav .mainM{
     display: flex;
     flex-flow: row wrap;
