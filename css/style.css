@@ -16,7 +16,7 @@ body{font-family: 'GmarketSansLight'; color: #fff;}
 @media all and (max-width:767px) {
     html{
         font-size: 12px;
-    }
+    } 
 }
 @media all and (max-width:575px) {
     html{
