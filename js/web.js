@@ -10,7 +10,7 @@ $(document).ready(function(){
     //     var section = contents.eq(i);
     //     var tt = section.offset().top;
     //     $('html, body').stop().animate({scrollTop:tt},800);
-    //     return false;
+    //     return false; 
     // });
 
     var menuc = $('.sub li');
