@@ -12,7 +12,7 @@ $(document).ready(function(){
     //     $('html, body').stop().animate({scrollTop:tt},800);
     //     return false; 
     // });
-
+ 
     var menuc = $('.sub li');
     var contentsc = $('.box2');
     menuc.click(function(e){
