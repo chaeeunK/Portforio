@@ -15,7 +15,7 @@ a:hover, a:visited, a:link{text-decoration: none; color:rgb(180, 193, 224);}
 body{font-family: 'GmarketSansLight'; color: #fff;}
 @media all and (max-width:767px) {
     html{
-        font-size: 12px;
+        font-size: 12px; 
     } 
 }
 @media all and (max-width:575px) {
