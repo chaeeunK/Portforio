@@ -9,7 +9,7 @@ $(document).ready(function(){
     //     var i = tg.index();
     //     var section = contents.eq(i);
     //     var tt = section.offset().top;
-    //     $('html, body').stop().animate({scrollTop:tt},800);
+    //     $('html, body').stop().animate({scrollTop:tt},800); 
     //     return false; 
     // });
  
