@@ -1,28 +1,5 @@
 $(document).ready(function(){
 
-    //나브 클릭시 이동
-    // var menu = $('.mainM > li');
-    // var contents = $('.box');
-    // menu.click(function(e){
-
-    //     var tg = $(this);
-    //     var i = tg.index();
-    //     var section = contents.eq(i);
-    //     var tt = section.offset().top;
-    //     $('html, body').stop().animate({scrollTop:tt},800); 
-    //     return false; 
-    // });
- 
-    var menuc = $('.sub li');
-    var contentsc = $('.box2');
-    menuc.click(function(e){
-        e.preventDefault();
-        var tg = $(this);
-        var i = tg.index();
-        var section = contentsc.eq(i);
-        var tt = section.offset().top;
-        $('html, body').stop().animate({scrollTop:tt},800);
-    });
 
     $('.scr').click(function(e){
         e.preventDefault();
@@ -74,48 +51,93 @@ $(document).ready(function(){
         var image = $(this).find('img').attr('title');
         $('.DEmodal img').attr('src',image)
             $('.DEmodal').css({'display':'block'});
-        });
-        $('.DEmodal').click(function(){
+    });
+    $('.DEmodal').click(function(){
             $('.DEmodal').css({'display':'none'});
-        });
+    });
 
 
+    var top1= $('#sc1').offset().top;
+    var top2= $('#sc2').offset().top;
+    var top3= $('#sc3').offset().top;
+    var top4= $('.pu1').offset().top;
+    var top5= $('.pu2').offset().top;
+    var top6= $('.pu3').offset().top;
+    var top7= $('.pu4').offset().top;
+    var top8= $('#sc5').offset().top;
+    var top9= $('#sc6').offset().top;
 
-        //스크롤 이벤트
-        // $(".top").each(function () {
-        //     // 개별적으로 Wheel 이벤트 적용 mousewheel(IE/chrome/opera) DOMMouseScroll(FF)
-        //     $(this).on("mousewheel DOMMouseScroll", function (e) {
-        //         e.preventDefault();
-        //         var delta = 0;
-        //         /* IE */
-        //         if (!event) event = window.event;
-        //         //휠에 대한 정보 얻기 파이어폭스 외 IE/Chrome/Opera = wheelDelta
-        //         if (event.wheelDelta) {
-        //             delta = event.wheelDelta / 50;
-        //             //평균 50~120 사이로 요소의 인식높이에 따라 다름(한 화면(height100%)기준일떄는 120
-        //             if (window.opera) delta = -delta;
-        //         //휠에 대한 정보 얻기 Mozilla FF = detail
-        //         } else if (event.detail) delta = -event.detail / 3;
-        //         var moveTop = null;
-        //         // 마우스휠을 위에서 아래로
-        //         if (delta < 0) {
-        //             if ($(this).next() != undefined) {
-        //                 moveTop = $(this).next().offset().top;
-        //             }
-        //         // 마우스휠을 아래에서 위로
-        //         } else {
-        //             if ($(this).prev() != undefined) {
-        //                 moveTop = $(this).prev().offset().top;
-        //             }
-        //         }
-        //         // 화면 이동 0.8초(800)
-        //         $("html,body").stop().animate({
-        //             scrollTop: moveTop + 'px'
-        //         }, {
-        //             duration: 300, complete: function () {
-        //             }
-        //         });
-        //     });
-        // });
-     
+    var gap=150;
+
+
+    $(window).scroll(function(){
+        var h = $(window).scrollTop();
+        if(h < 400){
+            $(".fi").removeClass('on');
+            $(".int").removeClass('on');
+        }
+        else if(h <= top2+gap){
+            $(".fi").addClass('on');
+            $(".int").addClass('on');
+        }
+        else if(h > top3-gap && h < top4-400){
+            $(".fi").removeClass('on');
+            $(".int").removeClass('on');
+            $(".work1 .wtext > div h3").removeClass('on');
+            $(".work1 .wtext > div p").removeClass('on');
+            $(".work1 .wtext > div a").removeClass('on');
+            $(".work2 .wtext > div h3").removeClass('on');
+            $(".work2 .wtext > div p").removeClass('on');
+            $(".work2 .wtext > div a").removeClass('on');
+            $(".work3 .wtext > div h3").removeClass('on');
+            $(".work3 .wtext > div p").removeClass('on');
+            $(".work3 .wtext > div a").removeClass('on');
+            $(".work4 .wtext > div h3").removeClass('on');
+            $(".work4 .wtext > div p").removeClass('on');
+            $(".work4 .wtext > div a").removeClass('on');
+        }
+        else if(h <= top4 + gap){
+            $(".work1 .wtext > div h3").addClass('on');
+            $(".work1 .wtext > div p").addClass('on');
+            $(".work1 .wtext > div a").addClass('on');
+        }
+        else if(h <= top5 + gap){
+            $(".work2 .wtext > div h3").addClass('on');
+            $(".work2 .wtext > div p").addClass('on');
+            $(".work2 .wtext > div a").addClass('on');
+        }
+        else if(h <= top6 + gap){
+            $(".work3 .wtext > div h3").addClass('on');
+            $(".work3 .wtext > div p").addClass('on');
+            $(".work3 .wtext > div a").addClass('on');
+        }
+        else if(h <= top7 + gap){
+            $(".work4 .wtext > div h3").addClass('on');
+            $(".work4 .wtext > div p").addClass('on');
+            $(".work4 .wtext > div a").addClass('on');
+        }
+        else if(h > top8-gap && h < top9-500){
+            $(".work1 .wtext > div h3").removeClass('on');
+            $(".work1 .wtext > div p").removeClass('on');
+            $(".work1 .wtext > div a").removeClass('on');
+            $(".work2 .wtext > div h3").removeClass('on');
+            $(".work2 .wtext > div p").removeClass('on');
+            $(".work2 .wtext > div a").removeClass('on');
+            $(".work3 .wtext > div h3").removeClass('on');
+            $(".work3 .wtext > div p").removeClass('on');
+            $(".work3 .wtext > div a").removeClass('on');
+            $(".work4 .wtext > div h3").removeClass('on');
+            $(".work4 .wtext > div p").removeClass('on');
+            $(".work4 .wtext > div a").removeClass('on');
+            $(".cMail h3").removeClass('on');
+            $(".cMail p").removeClass('on');
+            $(".con_r .fig").removeClass('on');
+        }
+        else if(h < top9+gap){
+            $(".cMail h3").addClass('on');
+            $(".cMail p").addClass('on');
+            $(".con_r .fig").addClass('on');
+        }
+    })
+    
 });
