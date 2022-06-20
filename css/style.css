@@ -6,17 +6,17 @@ a:hover, a:visited, a:link{text-decoration: none; color:rgb(180, 193, 224);}
     @font-face {
         font-family: 'GmarketSansLight';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-        font-weight: normal;           
+        font-weight: normal;
         font-style: normal;
     }
     html{
-        font-size: 10px; 
-    } 
+        font-size: 10px;
+    }
 body{font-family: 'GmarketSansLight'; color: #fff;}
-@media all and (max-width:767px) {  
+@media all and (max-width:767px) {
     html{
-        font-size: 12px; 
-    } 
+        font-size: 12px;
+    }
 }
 @media all and (max-width:575px) {
     html{
@@ -98,7 +98,7 @@ header{
     left: 2%;
     border-bottom:1px solid rgba(162, 180, 221, 0.507);
     backdrop-filter: blur(3px);
-} 
+}
 #Nav .mainM{
     display: flex;
     flex-flow: row wrap;
@@ -126,32 +126,7 @@ header{
     opacity: 1;
     transform: translateY(0);
 }
-.sub{
-    overflow: hidden;
-    opacity: 0;
-    transition: .2s ease-in-out;
-    transform:translateY(-25px);
-    background-color: rgba(220, 222, 234, 0.9);
-    border: 2px solid rgba(162, 180, 221, 0.507);
-    border-top:none;
-}
-.sub > li{
-    height: 50px;
-    line-height: 50px;
-}
-.sub > li > a{
-    font-size:1.6rem;
-    text-shadow: 1px 1px 4px rgb(69, 69, 69);
-    color:rgb(17, 19, 30);
-}
-.sub > li:hover{
-    background-color: rgba(255,255,255,0.6)
-}
-.sub > li:hover > a{
-    color:rgb(42, 53, 95);
-    font-weight: bold;
-    text-shadow: none;
-}
+
 .box{
     width: 100%;
     height: 100%;
@@ -445,7 +420,6 @@ header{
     font-weight: 500;
     color:rgb(89, 96, 114);
     letter-spacing: 5px;
-    cursor: pointer;
     z-index: 899;
 }
 .main_txt h2 span{
@@ -615,6 +589,13 @@ header{
     text-align: center;
     z-index: 95;
     position: relative;
+    opacity: 0;
+    transform:translate(-200px,0);
+    transition: all 1s; 
+}
+.fi.on{
+    opacity: 1;
+    transform:translate(0);
 }
 #sc2 img:nth-child(2){
     width: 20rem;
@@ -659,6 +640,13 @@ header{
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-around;
+    opacity: 0;
+    transform:translate(200px,0);
+    transition: all 1s; 
+}
+#sc2 .int.on{
+    opacity: 1;
+    transform:translate(0);
 }
 #sc2 h4{
     font-size:2.5em;
@@ -858,7 +846,7 @@ header{
     border:1px solid rgba(255,255,255,1);
     border-radius: 10px;
     overflow: hidden;
-    transition:0.5s;
+    transition:0.3s;
 }
 .skillname{
     position: relative;
@@ -883,7 +871,7 @@ header{
     background: #6c7ab9;
 }
 .progress.on{
-    animation:skillbar 2s ease-in-out forwards;
+    animation:skillbar 1s ease-in-out forwards;
 }
 @keyframes skillbar{
 	from{
@@ -1194,12 +1182,26 @@ header{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 0.5s;
+}
+.wtext h3.on{
+    opacity: 1;
+    transform: translate(0);
 }
 
 .wtext p{
     font-size: 2.4rem;
     text-align: center;
     color:#ffffff;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 1s;
+}
+.wtext p.on{
+    opacity: 1;
+    transform: translate(0);
 }
 
 .wtext2 p{
@@ -1220,6 +1222,13 @@ header{
     padding: 10px 15px;
     color:#445080;
     font-weight: bold;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 1.5s;
+}
+.wtext a.on{
+    opacity: 1;
+    transform: translate(0);
 }
 @media all and (max-width:767px){
     #sc4 > div{
@@ -1728,14 +1737,41 @@ header{
 .cMail h3{
     font-size: 2.5rem;
     padding-bottom: 20px;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 0.25s;
+}
+.cMail h3.on{
+    opacity:1;
+    transform: translate(0);
 }
 .cMail p{
     padding: 13px 0;
     font-size: 2rem;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 0.5s;
+}
+.cMail p.on{
+    opacity:1;
+    transform: translate(0);
+}
+.cMail p:nth-child(3){
+    transition: all 0.75s;
+}
+.cMail p:nth-child(4){
+    transition: all 1s;
+}
+.cMail p:nth-child(5){
+    transition: all 1.25s;
+}
+.cMail p:nth-child(6){
+    transition: all 1.5s;
 }
 .cMail p:nth-child(8){
     font-weight: normal;
     font-size:1.8rem;
+    transition: all 1.75s;
 }
 .con_r{
     width: 50%;
@@ -1744,6 +1780,13 @@ header{
 .con_r .fig{
     width: 60%;
     margin: 0 auto;
+    opacity: 0;
+    transform: translate(100px,0);
+    transition: all 0.5s;
+}
+.con_r .fig.on{
+    opacity: 1;
+    transform:translate(0);
 }
 .fig img{
     display: block;
