@@ -24,7 +24,7 @@ $(document).ready(function(){
         var i = $(this).index();
 
         $('.tool li').fadeOut(0);
-        $('.tool li').eq(i).fadeIn(0);
+        $('.tool li').eq(i).fadeIn(0);  
 
         });
 
