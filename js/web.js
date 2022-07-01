@@ -28,7 +28,7 @@ $(document).ready(function(){
 
         });
 
-    $(window).trigger('resize');
+    $(window).trigger('resize'); 
 // Scroll effect end
 
 
