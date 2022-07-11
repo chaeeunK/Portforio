@@ -8,7 +8,7 @@ a:hover, a:visited, a:link{text-decoration: none; color:rgb(180, 193, 224);}
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-    }
+    } 
     html{
         font-size: 10px;
     }
