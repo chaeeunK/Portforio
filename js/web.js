@@ -29,7 +29,7 @@ $(document).ready(function(){
         });
 
     $(window).trigger('resize'); 
-// Scroll effect end
+// Scroll effect end 
 
 
     //포트폴리오 모니터 마우스오버 이벤트
