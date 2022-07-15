@@ -13,7 +13,7 @@ $(document).ready(function(){
     //모달1
     $(".moclick").click(function(){
         $(".modal").fadeIn();
-    });
+    }); 
     $(".modal").click(function(){
         $(".modal").fadeOut();
     });
