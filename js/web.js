@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('html, body').stop().animate({scrollTop:tt},800);
     });
 
-    
+  
     //모달1
     $(".moclick").click(function(){
         $(".modal").fadeIn();
