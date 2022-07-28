@@ -8,7 +8,6 @@ $(document).ready(function(){
         var tt = tg.offset().top;
         $('html, body').stop().animate({scrollTop:tt},800);
     });
-
   
     //모달1
     $(".moclick").click(function(){
