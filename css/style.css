@@ -24,7 +24,7 @@ body{font-family: 'GmarketSansLight'; color: #fff;}
     } 
 }
 /*모다아아아알*/
-.modal{
+.modal{ 
     position: fixed;
     top:0;
     left:0;
